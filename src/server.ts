@@ -10,7 +10,7 @@ app.get('/', (request, response)=>{
 });
 
 
-app.use(categoriesRoutes);
+app.use('/categories', categoriesRoutes);
 
 
 app.listen(3333, () => console.log("server is running"));
