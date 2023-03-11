@@ -4,10 +4,10 @@ import { ICategoriesRepository } from "../../repositories/ICategoriesRepository"
 
 class ListCategoriesUseCase {
     
-    constructor(private repository: ICategoriesRepository){}
+    constructor(private categoriesRepository: ICategoriesRepository){}
 
     execute(): Category[] {
-        return  this.repository.list();
+        return  this.categoriesRepository.list();
     }
 }
 

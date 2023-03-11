@@ -6,19 +6,9 @@ interface IRequest {
     description: string;
 }
 
-/**
- * [x] definir tipo de retorno
- * [x] alterar o retorno do erro
- * [x] acessar o repositorio
- * [x] retornar algo
- */
 class CreateCategoryUseCase {
 
-    private categoriesRepository : ICategoriesRepository;
-
-    constructor(repository: ICategoriesRepository){
-        this.categoriesRepository = repository
-    }
+    constructor(private categoriesRepository: ICategoriesRepository){}
 
     execute( { name, description } : IRequest): void {
 
