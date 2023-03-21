@@ -1,5 +1,5 @@
 import { Specification } from "../../entities/Specification";
-import { ISpecificationRepository } from "../../repositories/ISpecificationRepository";
+import { ISpecificationRepository } from "../../repositories/ISpecificationsRepository";
 
 
 class ListSpecificationUseCase{
