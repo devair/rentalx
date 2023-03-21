@@ -5,7 +5,7 @@ interface ISpecificationDTO {
     description: string;
 }
 
-interface ISpecificationRepository {
+interface ISpecificationsRepository {
 
     create({ name, description }: ISpecificationDTO ): Promise<void>;
 
@@ -15,4 +15,4 @@ interface ISpecificationRepository {
 
 }
 
-export { ISpecificationRepository, ISpecificationDTO };
+export { ISpecificationsRepository, ISpecificationDTO };

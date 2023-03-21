@@ -6,9 +6,9 @@ class CreateCategoryController {
 
     async handle(request: Request, response: Response): Promise<Response> {
 
-        const createCategoryUseCase = container.resolve(CreateCategoryUseCase);
-
         const { name, description } = request.body;
+        
+        const createCategoryUseCase = container.resolve(CreateCategoryUseCase);
 
         try {
             await createCategoryUseCase.execute({ name, description });
