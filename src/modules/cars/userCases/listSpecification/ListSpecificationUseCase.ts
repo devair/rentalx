@@ -6,8 +6,8 @@ class ListSpecificationUseCase{
 
     constructor(private specificationRepository: ISpecificationRepository){}
 
-    execute(): Specification[] {
-        return this.specificationRepository.list();
+    async execute(): Promise<Specification[]> {
+        return await this.specificationRepository.list();
     }
 } 
 

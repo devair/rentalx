@@ -5,8 +5,8 @@ class ListSpecificationController {
 
     constructor(private listSpecificationUseCase: ListSpecificationUseCase){}
 
-    handle(request: Request, response: Response){
-        const all = this.listSpecificationUseCase.execute();
+    async handle(request: Request, response: Response){
+        const all = await this.listSpecificationUseCase.execute();
         
         return response.status(200).json(all);
     }

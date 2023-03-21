@@ -12,7 +12,7 @@
         "/categories" : {
             "post": {
                 "tags": ["Category"],                
-                "summary": "Sumary",
+                "summary": "Create a car category",
                 "description": "descripton",
                 "requestBody" :{
                     "content":{
@@ -75,7 +75,7 @@
         "/specifications": {
             "post":{
                 "tags": ["Specification"],
-                "summary":"Summary",
+                "summary":"Create a car specification",
                 "description": "description",
                 "requestBody": {
                     "content":{
@@ -104,6 +104,33 @@
                     },
                     "500": {
                         "description": "Server error"
+                    }
+                }
+            },
+            "get":{
+                "tags": ["Specification"],
+                "summary": "List all specifications",
+                "responses": {
+                    "200" : {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type" : "array",
+                                    "items":{
+                                        "type": "object",
+                                        "properties": {
+                                            "name" : {
+                                                "type": "string"
+                                            },
+                                            "description": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }   
+                            }
+                        }
                     }
                 }
             }
