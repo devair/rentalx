@@ -3,14 +3,14 @@ import {CreateSpecificationController} from '../modules/cars/userCases/createSpe
 import { ListSpecificationController } from '../modules/cars/userCases/listSpecification/ListSpecificationController';
 
 
-const specificationsRouter = Router();
+const specificationsRouters = Router();
 
 const createSpecificationController = new CreateSpecificationController();
 
 const listSpecificationController = new ListSpecificationController();
 
-specificationsRouter.post('/', createSpecificationController.handle);
+specificationsRouters.post('/', createSpecificationController.handle);
 
-specificationsRouter.get('/', listSpecificationController.handle);
+specificationsRouters.get('/', listSpecificationController.handle);
 
-export { specificationsRouter };
+export { specificationsRouters };
