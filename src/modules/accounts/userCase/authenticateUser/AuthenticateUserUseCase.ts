@@ -21,7 +21,7 @@ class AuthenticateUserUseCase {
 
     constructor(
         @inject('UsersRepository')
-        private repository: IUsersRepository){
+        private repository: IUsersRepository){ 
 
     }
 
@@ -49,7 +49,7 @@ class AuthenticateUserUseCase {
         const tokenReturn: IResponse = {
             user : {
                 name: user.name,
-                email: user.email
+                email: user.email,
             },
             token
         }
