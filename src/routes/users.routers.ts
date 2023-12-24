@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { ensureAuthenticated } from "../middleware/ensureAuthenticated";
-import { CreateUserController } from "../modules/accounts/userCase/createUser/CreateUserController";
-import { ListUsersController } from "../modules/accounts/userCase/listUsers/ListUsersController";
-import { UpdateUserAvatarController } from "../modules/accounts/userCase/updateUserAvatar/UpdateUserAvatarController";
+import { CreateUserController } from "@modules/accounts/userCase/createUser/CreateUserController";
+import { ListUsersController } from "@modules/accounts/userCase/listUsers/ListUsersController";
+import { UpdateUserAvatarController } from "@modules/accounts/userCase/updateUserAvatar/UpdateUserAvatarController";
+import { ensureAuthenticated } from "middleware/ensureAuthenticated";
 import multer from "multer";
 import uploadConfig from "../config/upload";
 
